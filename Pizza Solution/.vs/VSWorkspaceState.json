@@ -7,6 +7,6 @@
     "\\Pizza\\Repository",
     "\\Pizza\\Services"
   ],
-  "SelectedNode": "\\Pizza\\Models\\User.cs",
+  "SelectedNode": "\\Pizza\\Controllers\\ManagerController.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -6,16 +6,18 @@ using Pizza.Services;
 using System.Text;
 using Microsoft.OpenApi.Models;
 using Pizza.Models;
-
-
+using MongoDB.Driver;
+using Microsoft.Extensions.DependencyInjection;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Config DI
+// Configure DI
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IManagerService, ManagerService>();
 builder.Services.AddDbContext<UserDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("PizzaCS")));
 
-//For JWT
+//Add JWT
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options => options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
     {
@@ -31,15 +33,24 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 //Inject Jwt Token DI
 builder.Services.AddScoped<IJwtToken, JwtToken>();
 
+//MongoDB
+builder.Services.Configure<MongoDBSettings>(
+        builder.Configuration.GetSection("MongoDB")
+    );
+builder.Services.AddTransient<IMongoRepository, MongoRepository>();
+
+
+
 // Add services to the container.
 builder.Services.AddControllers();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+
 //builder.Services.AddSwaggerGen();
 builder.Services.AddSwaggerGen(options =>
 {
-    
+    //options.SchemaFilter<EnumSchemaFilter>();
     options.SwaggerDoc("v1", new OpenApiInfo { Title = "Pizza API", Version = "v1" });
     options.AddSecurityDefinition(JwtBearerDefaults.AuthenticationScheme, new OpenApiSecurityScheme
     {
@@ -72,6 +83,10 @@ builder.Services.AddSwaggerGen(options =>
 
 
 var app = builder.Build();
+
+//call data seeding method for mongodb
+var seedData = app.Services.GetRequiredService<IMongoRepository>();
+seedData.SeedDataInMenu_mongodb();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

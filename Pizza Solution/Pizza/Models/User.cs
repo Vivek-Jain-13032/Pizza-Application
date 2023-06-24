@@ -1,26 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using MongoDB.Bson.Serialization.Attributes;
 
 namespace Pizza.Models
 {
     public class User
     {
-        [Key] //Primary Key in database for user table
-        [EmailAddress]
-        [Required]
+        [BsonId]
+        public string User_Id { get; set; }
         public String Email { get; set; }
+        public List<OrderDetails> Orders { get; set; } = new List<OrderDetails>();
 
-        [Required]
-        public String Name { get; set; }
-
-        [Required]
-        public String ContactNo { get; set; }
-
-        [Required]
-        public String Password { get; set; }
-
-        [NotMapped]
-        [Compare("Password")]
-        public String ConfirmPassword { get; set; }
     }
 }

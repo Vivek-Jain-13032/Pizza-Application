@@ -10,32 +10,24 @@ namespace Pizza.Repository
             
         }
 
-        //Create Tables in SQL for below Entites
-        public DbSet<User> Customers { get; set; }
-        public DbSet<Menu> Menu { get; set; }
-        public DbSet<Models.Pizza> Pizza { get; set; }
-        public DbSet<Topping> Topping { get; set; }
+        public DbSet<NewUser> Customers { get; set; }
 
-        /*protected override void OnModelCreating(ModelBuilder modelBuilder)
+        public DbSet<Manager> Manager { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            List<Pizza.Models.Pizza> pizzas = new List<Pizza.Models.Pizza>() {
-                new Models.Pizza()
-                {
-                    Id = "1",
-
-                }
-            };
             base.OnModelCreating(modelBuilder);
-            //Seed data for menu
-            var menu = new List<Menu>()
-            {
-                new Menu()
-                {
-                   Tax = 10
 
-                }
+            var manager = new Manager()
+            {
+                Email = "manager@gmail.com",
+                Id = "m001",
+                Password = "pass"
             };
-        }*/
+
+            //Seed manager data to the database.
+            modelBuilder.Entity<Manager>().HasData(manager);
+        }
 
     }
 }

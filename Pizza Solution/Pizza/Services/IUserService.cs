@@ -4,15 +4,12 @@ namespace Pizza.Services
 {
     public interface IUserService
     {
-        public bool register(User user);
-        public string login(string email, string password);
-        /*public void logout();*/
-        public string ForgetPassword(string email);
-
-
-        //---------------------------------------------------------
-
-        //public List ViewMenu();
-
+        public string Register(NewUser user);
+        public NewUser Login(string email, string password);
+        public string ForgetPassword(string user_id, string email);
+        public IEnumerable<Menu> ViewMenu();
+        public string CreateOrder(OrderPizza oreder);
+        public List<OrderDetails> TrackOrder();
+        public List<OrderDetails> OrderHistory();
     }
 }

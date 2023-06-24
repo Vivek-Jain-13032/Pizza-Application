@@ -165,3 +165,210 @@ D:\C#\App\Pizza Solution\Pizza\obj\Debug\net7.0\Pizza.pdb
 D:\C#\App\Pizza Solution\Pizza\obj\Debug\net7.0\Pizza.genruntimeconfig.cache
 D:\C#\App\Pizza Solution\Pizza\obj\Debug\net7.0\ref\Pizza.dll
 D:\C#\App\Pizza Solution\Pizza\bin\Debug\net7.0\Swashbuckle.AspNetCore.Annotations.dll
+D:\C#\App\Pizza Solution\Pizza\bin\Debug\net7.0\AWSSDK.Core.dll
+D:\C#\App\Pizza Solution\Pizza\bin\Debug\net7.0\AWSSDK.SecurityToken.dll
+D:\C#\App\Pizza Solution\Pizza\bin\Debug\net7.0\DnsClient.dll
+D:\C#\App\Pizza Solution\Pizza\bin\Debug\net7.0\MongoDB.Bson.dll
+D:\C#\App\Pizza Solution\Pizza\bin\Debug\net7.0\MongoDB.Driver.dll
+D:\C#\App\Pizza Solution\Pizza\bin\Debug\net7.0\MongoDB.Driver.Core.dll
+D:\C#\App\Pizza Solution\Pizza\bin\Debug\net7.0\MongoDB.Libmongocrypt.dll
+D:\C#\App\Pizza Solution\Pizza\bin\Debug\net7.0\SharpCompress.dll
+D:\C#\App\Pizza Solution\Pizza\bin\Debug\net7.0\Snappier.dll
+D:\C#\App\Pizza Solution\Pizza\bin\Debug\net7.0\ZstdSharp.dll
+D:\C#\App\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\linux\native\libmongocrypt.so
+D:\C#\App\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\osx\native\libmongocrypt.dylib
+D:\C#\App\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\win\native\mongocrypt.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\appsettings.Development.json
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\appsettings.json
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Pizza.exe
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Pizza.deps.json
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Pizza.runtimeconfig.json
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Pizza.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Pizza.pdb
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\AWSSDK.Core.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\AWSSDK.SecurityToken.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Azure.Core.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Azure.Identity.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\DnsClient.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Humanizer.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.OpenApi.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\MongoDB.Bson.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\MongoDB.Driver.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\MongoDB.Driver.Core.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\MongoDB.Libmongocrypt.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Mono.TextTemplating.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\SharpCompress.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Snappier.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Swashbuckle.AspNetCore.Annotations.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\System.CodeDom.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\System.Drawing.Common.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\System.Memory.Data.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\System.Runtime.Caching.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\System.Security.Permissions.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\System.Windows.Extensions.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\ZstdSharp.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\linux\native\libmongocrypt.so
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\osx\native\libmongocrypt.dylib
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\win\native\mongocrypt.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\obj\Debug\net7.0\Pizza.csproj.AssemblyReference.cache
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\obj\Debug\net7.0\Pizza.GeneratedMSBuildEditorConfig.editorconfig
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\obj\Debug\net7.0\Pizza.AssemblyInfoInputs.cache
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\obj\Debug\net7.0\Pizza.AssemblyInfo.cs
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\obj\Debug\net7.0\Pizza.csproj.CoreCompileInputs.cache
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\obj\Debug\net7.0\Pizza.MvcApplicationPartsAssemblyInfo.cs
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\obj\Debug\net7.0\Pizza.MvcApplicationPartsAssemblyInfo.cache
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\obj\Debug\net7.0\staticwebassets\msbuild.Pizza.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\obj\Debug\net7.0\staticwebassets\msbuild.build.Pizza.props
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Pizza.props
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Pizza.props
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\obj\Debug\net7.0\staticwebassets.pack.json
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\obj\Debug\net7.0\staticwebassets.build.json
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\obj\Debug\net7.0\staticwebassets.development.json
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\obj\Debug\net7.0\scopedcss\bundle\Pizza.styles.css
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\obj\Debug\net7.0\Pizza.csproj.CopyComplete
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\obj\Debug\net7.0\Pizza.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\obj\Debug\net7.0\refint\Pizza.dll
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\obj\Debug\net7.0\Pizza.pdb
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\obj\Debug\net7.0\Pizza.genruntimeconfig.cache
+D:\Intelliswift\Pizza Solution (8)\Pizza Solution\Pizza\obj\Debug\net7.0\ref\Pizza.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\obj\Debug\net7.0\Pizza.csproj.AssemblyReference.cache
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\obj\Debug\net7.0\Pizza.GeneratedMSBuildEditorConfig.editorconfig
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\obj\Debug\net7.0\Pizza.AssemblyInfoInputs.cache
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\obj\Debug\net7.0\Pizza.AssemblyInfo.cs
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\obj\Debug\net7.0\Pizza.csproj.CoreCompileInputs.cache
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\obj\Debug\net7.0\Pizza.MvcApplicationPartsAssemblyInfo.cs
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\obj\Debug\net7.0\Pizza.MvcApplicationPartsAssemblyInfo.cache
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\obj\Debug\net7.0\Pizza.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\obj\Debug\net7.0\refint\Pizza.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\obj\Debug\net7.0\Pizza.pdb
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\appsettings.Development.json
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\appsettings.json
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Pizza.exe
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Pizza.deps.json
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Pizza.runtimeconfig.json
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Pizza.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Pizza.pdb
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\AWSSDK.Core.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\AWSSDK.SecurityToken.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Azure.Core.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Azure.Identity.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\DnsClient.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Humanizer.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.OpenApi.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\MongoDB.Bson.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\MongoDB.Driver.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\MongoDB.Driver.Core.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\MongoDB.Libmongocrypt.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Mono.TextTemplating.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\SharpCompress.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Snappier.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Swashbuckle.AspNetCore.Annotations.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\System.CodeDom.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\System.Drawing.Common.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\System.Memory.Data.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\System.Runtime.Caching.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\System.Security.Permissions.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\System.Windows.Extensions.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\ZstdSharp.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\linux\native\libmongocrypt.so
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\osx\native\libmongocrypt.dylib
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\win\native\mongocrypt.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\obj\Debug\net7.0\staticwebassets\msbuild.Pizza.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\obj\Debug\net7.0\staticwebassets\msbuild.build.Pizza.props
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Pizza.props
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Pizza.props
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\obj\Debug\net7.0\staticwebassets.pack.json
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\obj\Debug\net7.0\staticwebassets.build.json
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\obj\Debug\net7.0\staticwebassets.development.json
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\obj\Debug\net7.0\scopedcss\bundle\Pizza.styles.css
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\obj\Debug\net7.0\Pizza.csproj.CopyComplete
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\obj\Debug\net7.0\Pizza.genruntimeconfig.cache
+D:\Intelliswift\Applications\Pizza-Application\Pizza Solution\Pizza\obj\Debug\net7.0\ref\Pizza.dll

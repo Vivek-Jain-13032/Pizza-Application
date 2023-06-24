@@ -5,6 +5,6 @@ namespace Pizza.Services
 {
     public interface IJwtToken
     {
-        string CreateJwtToken(User user, string role);
+        string CreateJwtToken(string email, string role);
     }
 }

@@ -15,10 +15,10 @@ namespace Pizza.Services
         {
             this._config = configuration;
         }
-        public string CreateJwtToken(User user, string role)
+        public string CreateJwtToken(string email, string role)
         {
             var claims = new List<Claim>();
-            claims.Add(new Claim(ClaimTypes.Email, user.Email));
+            claims.Add(new Claim(ClaimTypes.Email, email));
             claims.Add(new Claim(ClaimTypes.Role, role));
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
             var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);

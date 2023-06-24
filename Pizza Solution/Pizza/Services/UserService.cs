@@ -1,5 +1,5 @@
-﻿using Pizza.Exceptions;
-using Pizza.Migrations;
+﻿using Microsoft.VisualBasic;
+using Pizza.Exceptions;
 using Pizza.Models;
 using Pizza.Repository;
 
@@ -7,24 +7,26 @@ namespace Pizza.Services
 {
     public class UserService : IUserService
     {
+        private static string User_Id;
         private readonly UserDbContext _userDbContext;
-        private readonly IJwtToken jwtToken;
-        public UserService(UserDbContext _userDbContext, IJwtToken jwtToken)
+        private readonly IMongoRepository _mongoRepository;
+        public UserService(UserDbContext _userDbContext, IMongoRepository mongoRepository)
         {
             this._userDbContext = _userDbContext;
-            this.jwtToken = jwtToken;
+            _mongoRepository = mongoRepository;
         }
 
-
-        public string login(string email, string password)
+        public NewUser Login(string email, string password)
         {
-            var customer = _userDbContext.Customers.Find(email);
+            //var customer = _userDbContext.Customers.Find(email);
+            var customer = _userDbContext.Customers.FirstOrDefault(u=>u.Email == email);
             if (customer == null)
             {
                 throw new UserNotFoundException("User Not Found With Given Email: "+email);
             }
             else if(email == customer.Email && password == customer.Password) {
-                return jwtToken.CreateJwtToken(customer, "user");
+                UserService.User_Id = customer.User_Id;
+                return customer;
             }
             else
             {
@@ -32,52 +34,122 @@ namespace Pizza.Services
             }
         }
 
-        public bool register(User user)
+        public string Register(NewUser user)
         {
-            //Check User Alredy Register or not
-            var costumer = _userDbContext.Customers.Find(user.Email);
-            if(costumer != null)
+            var customer = _userDbContext.Customers.FirstOrDefault(u => u.Email == user.Email);
+            int updateLines;
+            if (customer != null)
             {
-                //User Alredy Register
                 throw new UserAlreadyExistsException("User Alredy Exist With Given Email: "+user.Email);
             }
 
-            var user1 = new User()
+            var user1 = new NewUser()
             {
+                User_Id = "u" + DateTime.Now.ToString("ss"),
                 Name = user.Name,
                 Email = user.Email,
                 Password = user.Password,
                 ContactNo = user.ContactNo
             };
-            _userDbContext.Customers.Add(user1);
-            var updateLines = _userDbContext.SaveChanges();
+            try
+            {
+                _userDbContext.Customers.Add(user1);
+                updateLines = _userDbContext.SaveChanges();
+                _mongoRepository.AddUser(new User()
+                {
+                    User_Id = user1.User_Id,
+                    Email = user.Email,
+                    Orders = new List<OrderDetails>()
+                });
+            }catch(Exception ex)
+            {
+                throw new Exception();
+            }
             if(updateLines > 0)
             {
-                //register Successfully
-                return true;
+                return user1.User_Id;
             }
             else
             {
-                //Server Side Error
-                return false;
+                return null;
             }
         }
 
-/*        public void logout()
+        public string ForgetPassword(string user_id, string email)
         {
-            throw new NotImplementedException();
-        }*/
-
-
-        public string ForgetPassword(string email)
-        {
-            //Need to create a mail and send Password to user Email.
-            User customer = _userDbContext.Customers.Find(email);
-            if(customer != null)
+            NewUser customer = _userDbContext.Customers.Find(user_id);
+            if (customer == null)
+            {
+                throw new UserNotFoundException("User Not Registered With Given Email: "+email);
+            }
+            else if(customer.User_Id == user_id && customer.Email == email)
             {
                 return customer.Password;
             }
-            throw new UserNotFoundException("User Not Registered With Given Email: "+email);
+            else
+            {
+                throw new IncorrectEmailOrPasswordException("Incorrect User-Id or Email");
+            }
+        }
+
+        public IEnumerable<Menu> ViewMenu()
+        {
+            return _mongoRepository.GetMenu();
+        }
+
+        public string CreateOrder(OrderPizza order)
+        {
+            User User = _mongoRepository.GetUserAndOrderDetails(User_Id);
+            var amount = (100 * order.Quantity)
+                    + (order.Size == Size.Small ? 50 : (order.Size == Size.Medium ? 100 : 150))
+                    + (order.Topping_Id.Count * 50);
+
+            DateTime now = DateTime.Now;
+            string formattedDateTime = now.ToString("yyyy-MM-dd HH:mm:ss");
+
+            var OrderDetails = new OrderDetails()
+            {
+                Order_Id = "o" + DateTime.Now.ToString("ss"),
+                OrderPizzaDetails = order,
+                OrderDate = formattedDateTime,
+                OrderStatus = "Accepted",
+                OrderAmount = amount,
+                OrderTax = 25,
+                OrderSubTotal = amount+25,
+
+                OrderDeliveryAgent = "Arjun",
+                OrderAgentID = "Arjun_01",
+                OrderAgentContact = "7418565495"
+            };
+            
+            User.Orders.Add(OrderDetails);
+            _mongoRepository.AddOrderDetailsToUser(User);
+            return "Order placed Successfully";
+        }
+
+        public List<OrderDetails> TrackOrder()
+        {
+            User user = _mongoRepository.GetUserAndOrderDetails(User_Id);
+            var orderDetailsList = new List<OrderDetails>();
+            foreach (var item in user.Orders)
+            {
+                if(item.OrderStatus != "Delivered")
+                {
+                    orderDetailsList.Add(item);
+                }
+            }
+            return orderDetailsList;
+        }
+
+        public List<OrderDetails> OrderHistory()
+        {
+            User user = _mongoRepository.GetUserAndOrderDetails(User_Id);
+            var orderDetailsList = new List<OrderDetails>();
+            foreach (var item in user.Orders)
+            {
+                orderDetailsList.Add(item);
+            }
+            return orderDetailsList;
         }
     }
 }
