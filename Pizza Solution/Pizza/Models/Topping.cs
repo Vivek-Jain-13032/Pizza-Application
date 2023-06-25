@@ -5,14 +5,10 @@ namespace Pizza.Models
 {
     public class Topping
     {
-        [Key]
-        [BsonId]
+        [BsonId] //Define as key in mongoDB.
         [Required]
         public string Topping_Id { get; set; }
         [Required]
         public string Topping_Name { get; set; }
-        //[Required]
-        //[BsonIgnore]
-        //public int Toppings { get; set; }
     }
 }

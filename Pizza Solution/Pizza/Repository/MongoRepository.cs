@@ -20,7 +20,7 @@ namespace Pizza.Repository
             _userCollection = mongoDatabase.GetCollection<User>(_dbSettings.Value.CustomerCollectionName);
         }
 
-
+        //For seeding data of menu in mongodb databse.
         public void SeedDataInMenu_mongodb()
         {
             // Clear existing data (optional)

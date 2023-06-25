@@ -5,7 +5,7 @@ namespace Pizza.Services
     public interface IUserService
     {
         public string Register(NewUser user);
-        public NewUser Login(string email, string password);
+        public string Login(string email, string password);
         public string ForgetPassword(string user_id, string email);
         public IEnumerable<Menu> ViewMenu();
         public string CreateOrder(OrderPizza oreder);

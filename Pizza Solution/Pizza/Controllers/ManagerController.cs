@@ -38,12 +38,6 @@ namespace Pizza.Controllers
             return Ok("JWT Token: "+token);
         }
 
-        //[HttpPost("add-menu")]
-        //public IActionResult EditMenu([FromBody] Menu menu)
-        //{
-        //    return Ok("Item Added In Menu");
-        //}
-
         [Authorize(Roles = "manager")]
         [HttpGet("view-all-orders")]
         public IActionResult ViewAllOrders()

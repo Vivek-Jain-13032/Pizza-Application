@@ -14,12 +14,5 @@ namespace Pizza.Models
 
         [Required]
         public string Pizza_Name { get; set; }
-
-        //[BsonIgnore]
-        //public Size Size { get; set; }
-        //[BsonIgnore]
-        //public Crust Crust { get; set; }
-        //[BsonIgnore]
-        //public int Price { get; set; }
     }
 }

@@ -2,11 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\Pizza",
-    "\\Pizza\\Controllers",
-    "\\Pizza\\Models",
-    "\\Pizza\\Repository",
-    "\\Pizza\\Services"
+    "\\Pizza\\Controllers"
   ],
-  "SelectedNode": "\\Pizza\\Controllers\\ManagerController.cs",
+  "SelectedNode": "\\Pizza Solution.sln",
   "PreviewInSolutionExplorer": false
 }

@@ -10,10 +10,13 @@ namespace Pizza.Repository
             
         }
 
+        //Create a table named as Customers.
         public DbSet<NewUser> Customers { get; set; }
 
+        //Create a table named as Manger.
         public DbSet<Manager> Manager { get; set; }
 
+        //Seeding data in Ms SQL Server for manager table.
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

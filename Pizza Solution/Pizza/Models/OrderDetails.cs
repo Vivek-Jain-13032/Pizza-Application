@@ -25,32 +25,5 @@ namespace Pizza.Models
         public string OrderAgentID { get; set; }
 
         public string OrderAgentContact { get; set; }
-
-        public override bool Equals(object? obj)
-        {
-            return base.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
-
-        public override string? ToString()
-        {
-            return base.ToString();
-        }
-
-        //        public static implicit operator List<object>(OrderDetails v)
-        //        {
-        //            throw new NotImplementedException();
-        //        }
-
-        //public override string ToString()
-        //{
-        //    return $"Order_Id: {Order_Id}, OrderPizzaDetails: {OrderPizzaDetails}, OrderDate: {OrderDate}, OrderStatus: {OrderStatus}, OrderAmount: {OrderAmount}, OrderTax: {OrderTax}, OrderSubTotal: {OrderSubTotal}, OrderDeliveryAgent: {OrderDeliveryAgent}, OrderAgentID: {OrderAgentID}, OrderAgentContact: {OrderAgentContact}";
-        //}
-
-
     }
 }

@@ -17,12 +17,10 @@ namespace Pizza.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
-        private readonly IJwtToken jwtToken;
         
         public UserController(IUserService userService, IJwtToken jwtToken)
         {
             _userService = userService;
-            this.jwtToken = jwtToken; 
         }
 
         [HttpPost("signup")]
@@ -48,12 +46,10 @@ namespace Pizza.Controllers
 
         [HttpPost("login")]
         public IActionResult Login([FromQuery]String email, [FromQuery]String password) {
-            NewUser customer;
             string token;
             try
             {
-                customer = _userService.Login(email, password);
-                token = jwtToken.CreateJwtToken(customer.Email, "user");
+                token = _userService.Login(email, password);
             }
             catch(UserNotFoundException ex)
             {

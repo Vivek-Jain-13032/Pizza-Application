@@ -8,16 +8,19 @@ namespace Pizza.Services
     public class UserService : IUserService
     {
         private static string User_Id;
+        private readonly IJwtToken jwtToken;
         private readonly UserDbContext _userDbContext;
         private readonly IMongoRepository _mongoRepository;
-        public UserService(UserDbContext _userDbContext, IMongoRepository mongoRepository)
+        public UserService(IJwtToken jwtToken, UserDbContext _userDbContext, IMongoRepository mongoRepository)
         {
             this._userDbContext = _userDbContext;
             _mongoRepository = mongoRepository;
+            this.jwtToken = jwtToken;
         }
 
-        public NewUser Login(string email, string password)
+        public string Login(string email, string password)
         {
+            string token;
             //var customer = _userDbContext.Customers.Find(email);
             var customer = _userDbContext.Customers.FirstOrDefault(u=>u.Email == email);
             if (customer == null)
@@ -26,7 +29,8 @@ namespace Pizza.Services
             }
             else if(email == customer.Email && password == customer.Password) {
                 UserService.User_Id = customer.User_Id;
-                return customer;
+                token = jwtToken.CreateJwtToken(customer.Email, "user");
+                return token;
             }
             else
             {

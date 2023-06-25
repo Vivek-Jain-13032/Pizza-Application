@@ -5,6 +5,7 @@ using System.Text.Json.Serialization;
 
 namespace Pizza.Models
 {
+    //To present enum as string.
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum Size
     {

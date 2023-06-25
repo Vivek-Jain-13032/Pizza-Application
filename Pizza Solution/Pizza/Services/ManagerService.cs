@@ -39,11 +39,6 @@ namespace Pizza.Services
             }
         }
 
-        //public void EditMenu(Menu menu)
-        //{
-        //    _mongoRepository.AddItemToMenu(menu);
-        //}
-
         public List<OrderDetails> ViewAllOrders()
         {
             List<OrderDetails> orderDetails = new List<OrderDetails>();
