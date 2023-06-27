@@ -60,28 +60,34 @@ namespace Pizza.Repository
             _menuCollection.InsertOne(menu);
         }
 
+        //Get complete data of menu collection.
         public IEnumerable<Menu> GetMenu() => _menuCollection.Find(_=>true).ToList();
 
+        //Inserting user in user collection with user email and empty order list.
         public void AddUser(User user)
         {
             Console.WriteLine("Adding User: "+ user.ToString());
             _userCollection.InsertOne(user);
         }
 
+        //Retrieving user by user-id.
         public User GetUserAndOrderDetails(string User_Id) {
             return _userCollection.Find(a => a.User_Id == User_Id).FirstOrDefault();
         }
 
+        //Adding and updating order details to user's order list
         public void AddOrderDetailsToUser(User user)
         {
             _userCollection.FindOneAndReplace(a => a.User_Id == user.User_Id, user);
         }
 
+        //To edit menu in menu collection.
         public void AddItemToMenu(Menu menu)
         {
             _menuCollection.InsertOne(menu);
         }
 
+        //Retrive all users present in database from user collection.
         public List<User> ViewAllOrders()
         {
             return _userCollection.Find(new BsonDocument()).ToList();
