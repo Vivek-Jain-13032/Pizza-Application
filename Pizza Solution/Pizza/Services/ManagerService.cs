@@ -19,6 +19,8 @@ namespace Pizza.Services
             this.jwtToken = jwtToken;
         }
 
+        //Login Manager.
+        //OR throw appropriate exception if login unsuccessfull.
         public string Login(string email, string password)
         {
             string token;
@@ -39,6 +41,7 @@ namespace Pizza.Services
             }
         }
 
+        //Return list of all orders of all registered users.
         public List<OrderDetails> ViewAllOrders()
         {
             List<OrderDetails> orderDetails = new List<OrderDetails>();
@@ -54,6 +57,8 @@ namespace Pizza.Services
 
         }
 
+        //Update order status by order-id.
+        //OR throw exception if order not found.
         public void ManageOrder(string order_id, string orderStatus)
         {
             bool flag = false;
@@ -77,6 +82,8 @@ namespace Pizza.Services
             }
         }
 
+        //Return complete order details based on order-id.
+        //OR throw exception if order not found.
         public OrderDetails OrderDetails(string order_id)
         {
             OrderDetails orderDetails = null;

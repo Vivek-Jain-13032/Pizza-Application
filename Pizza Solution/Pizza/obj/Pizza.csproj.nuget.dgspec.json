@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Intelliswift\\Applications\\Pizza-Application\\Pizza Solution\\Pizza\\Pizza.csproj": {}
+    "D:\\Intelliswift\\Pizza Solution (12)\\Pizza Solution\\Pizza\\Pizza.csproj": {}
   },
   "projects": {
-    "D:\\Intelliswift\\Applications\\Pizza-Application\\Pizza Solution\\Pizza\\Pizza.csproj": {
+    "D:\\Intelliswift\\Pizza Solution (12)\\Pizza Solution\\Pizza\\Pizza.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Intelliswift\\Applications\\Pizza-Application\\Pizza Solution\\Pizza\\Pizza.csproj",
+        "projectUniqueName": "D:\\Intelliswift\\Pizza Solution (12)\\Pizza Solution\\Pizza\\Pizza.csproj",
         "projectName": "Pizza",
-        "projectPath": "D:\\Intelliswift\\Applications\\Pizza-Application\\Pizza Solution\\Pizza\\Pizza.csproj",
+        "projectPath": "D:\\Intelliswift\\Pizza Solution (12)\\Pizza Solution\\Pizza\\Pizza.csproj",
         "packagesPath": "C:\\Users\\vivek\\.nuget\\packages\\",
-        "outputPath": "D:\\Intelliswift\\Applications\\Pizza-Application\\Pizza Solution\\Pizza\\obj\\",
+        "outputPath": "D:\\Intelliswift\\Pizza Solution (12)\\Pizza Solution\\Pizza\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vivek\\AppData\\Roaming\\NuGet\\NuGet.Config",

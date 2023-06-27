@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Pizza",
-    "\\Pizza\\Controllers"
+    "\\Pizza"
   ],
-  "SelectedNode": "\\Pizza Solution.sln",
+  "SelectedNode": "\\Pizza\\Controllers",
   "PreviewInSolutionExplorer": false
 }

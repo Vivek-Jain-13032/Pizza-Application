@@ -11,7 +11,7 @@ using Pizza.Repository;
 namespace Pizza.Migrations
 {
     [DbContext(typeof(UserDbContext))]
-    [Migration("20230624045514_Customers")]
+    [Migration("20230626045219_Customers")]
     partial class Customers
     {
         /// <inheritdoc />
@@ -57,7 +57,8 @@ namespace Pizza.Migrations
 
                     b.Property<string>("ContactNo")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("Email")
                         .IsRequired()

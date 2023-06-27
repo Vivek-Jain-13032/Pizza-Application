@@ -15,6 +15,8 @@ namespace Pizza.Services
         {
             this._config = configuration;
         }
+
+        // Create JWT Token, set user details as claims and role.
         public string CreateJwtToken(string email, string role)
         {
             var claims = new List<Claim>();
@@ -26,11 +28,13 @@ namespace Pizza.Services
                 _config["Jwt:Issuer"],
                 _config["Jwt:Audience"],
                 claims,
-                expires: DateTime.Now.AddMinutes(15),
+                expires: DateTime.Now.AddMinutes(30), // Set the initial expiration time to 30 minutes from now
                 signingCredentials: credentials
-                );
+            );
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
+
     }
 }
+

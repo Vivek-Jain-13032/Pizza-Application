@@ -54,7 +54,8 @@ namespace Pizza.Migrations
 
                     b.Property<string>("ContactNo")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("Email")
                         .IsRequired()

@@ -18,10 +18,11 @@ namespace Pizza.Services
             this.jwtToken = jwtToken;
         }
 
+        //Login user.
+        //OR throw appropriate exception if login unsuccessfull.
         public string Login(string email, string password)
         {
             string token;
-            //var customer = _userDbContext.Customers.Find(email);
             var customer = _userDbContext.Customers.FirstOrDefault(u=>u.Email == email);
             if (customer == null)
             {
@@ -38,6 +39,8 @@ namespace Pizza.Services
             }
         }
 
+        //Register User
+        //OR throw appropriate exception if registration unsuccessfull
         public string Register(NewUser user)
         {
             var customer = _userDbContext.Customers.FirstOrDefault(u => u.Email == user.Email);
@@ -79,12 +82,14 @@ namespace Pizza.Services
             }
         }
 
+        //Return user password if given user-id and email are correct.
+        //OR throw appropriate exception if request unsuccessfull.
         public string ForgetPassword(string user_id, string email)
         {
             NewUser customer = _userDbContext.Customers.Find(user_id);
             if (customer == null)
             {
-                throw new UserNotFoundException("User Not Registered With Given Email: "+email);
+                throw new UserNotFoundException("User Not Registered With Given Email or Id");
             }
             else if(customer.User_Id == user_id && customer.Email == email)
             {
@@ -96,15 +101,18 @@ namespace Pizza.Services
             }
         }
 
+
+        //Display Pizza Menu.
         public IEnumerable<Menu> ViewMenu()
         {
             return _mongoRepository.GetMenu();
         }
 
+        //Create order and return amount.
         public string CreateOrder(OrderPizza order)
         {
             User User = _mongoRepository.GetUserAndOrderDetails(User_Id);
-            var amount = (100 * order.Quantity)
+            int amount = (100 * order.Quantity)
                     + (order.Size == Size.Small ? 50 : (order.Size == Size.Medium ? 100 : 150))
                     + (order.Topping_Id.Count * 50);
 
@@ -128,16 +136,17 @@ namespace Pizza.Services
             
             User.Orders.Add(OrderDetails);
             _mongoRepository.AddOrderDetailsToUser(User);
-            return "Order placed Successfully";
+            return "Order placed Successfully, Amount to pay: "+(amount+25);
         }
 
+        //Return list of login user's order details (all orders which are not Delivered).
         public List<OrderDetails> TrackOrder()
         {
             User user = _mongoRepository.GetUserAndOrderDetails(User_Id);
             var orderDetailsList = new List<OrderDetails>();
             foreach (var item in user.Orders)
             {
-                if(item.OrderStatus != "Delivered")
+                if(item.OrderStatus.ToLower() != "delivered")
                 {
                     orderDetailsList.Add(item);
                 }
@@ -145,6 +154,7 @@ namespace Pizza.Services
             return orderDetailsList;
         }
 
+        //Return list of login user's order details.
         public List<OrderDetails> OrderHistory()
         {
             User user = _mongoRepository.GetUserAndOrderDetails(User_Id);

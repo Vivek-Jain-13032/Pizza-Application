@@ -18,6 +18,7 @@ namespace Pizza.Controllers
             this._managerService = managerService;
         }
 
+        //Return JWT Token after successfull login by manager OR throw appropriate exceptions if login unsuccessfull.
         [HttpPost("login-manager")]
         public IActionResult Login([FromQuery]string email, [FromQuery]string password)
         {
@@ -30,14 +31,13 @@ namespace Pizza.Controllers
                 return NotFound(ex.Message);
             }catch(IncorrectEmailOrPasswordException ex) { 
                 return Unauthorized(ex.Message);
-            }
-            catch (Exception ex) {
+            }catch (Exception ex) {
                 return StatusCode(500, "An error occurred: " + ex.Message);//500
             }
-
-            return Ok("JWT Token: "+token);
+            return Ok("JWT Token: " + "Bearer " + token);//200
         }
 
+        //Return details of all the orders of all registered users only after successfull login and using JWT Token as Manager Role.
         [Authorize(Roles = "manager")]
         [HttpGet("view-all-orders")]
         public IActionResult ViewAllOrders()
@@ -45,6 +45,8 @@ namespace Pizza.Controllers
             return Ok(_managerService.ViewAllOrders());
         }
 
+        //Manage order status of specific order with the help of order-id only after successfull login and using JWT Token as Manager Role.
+        //OR throw exception if user is unauthorized or invalid token.
         [Authorize(Roles = "manager")]
         [HttpPut("manage-order")]
         public IActionResult ManageOrder([FromQuery] string order_Id, [FromQuery] string order_status) {
@@ -57,6 +59,8 @@ namespace Pizza.Controllers
             return Ok("Order Status Update Success");
         }
 
+        //Get order details by order-id only after successfull login and using JWT Token as Manager Role.
+        //OR throw exception if user is unauthorized or invalid token.
         [Authorize(Roles = "manager")]
         [HttpGet("order-details")]
         public IActionResult OrderDetails(string order_id)
@@ -65,11 +69,10 @@ namespace Pizza.Controllers
             try
             {
                 orderDetails = _managerService.OrderDetails(order_id);
-            }catch(OrderNotFound ex)
-            {
+            }catch(OrderNotFound ex) {
                 return NotFound(ex.Message);
             }
-            return Ok();
+            return Ok(orderDetails);
         }
     }
 }
