@@ -2,6 +2,8 @@
 using Pizza.Exceptions;
 using Pizza.Models;
 using Pizza.Repository;
+using Pizza.Utilities;
+using System.Collections.Generic;
 
 namespace Pizza.Services
 {
@@ -26,7 +28,7 @@ namespace Pizza.Services
             var customer = _userDbContext.Customers.FirstOrDefault(u=>u.Email == email);
             if (customer == null)
             {
-                throw new UserNotFoundException("User Not Found With Given Email: "+email);
+                throw new UserNotFoundException(Message.UserNotFound_ForLogin);
             }
             else if(email == customer.Email && password == customer.Password) {
                 UserService.User_Id = customer.User_Id;
@@ -35,7 +37,7 @@ namespace Pizza.Services
             }
             else
             {
-                throw new IncorrectEmailOrPasswordException("Incorrect Email or Password");
+                throw new IncorrectEmailOrPasswordException(Message.Incorrect_EmailOrPassword);
             }
         }
 
@@ -43,11 +45,11 @@ namespace Pizza.Services
         //OR throw appropriate exception if registration unsuccessfull
         public string Register(NewUser user)
         {
-            var customer = _userDbContext.Customers.FirstOrDefault(u => u.Email == user.Email);
+            var customer = _userDbContext.Customers.Any(u => u.Email == user.Email);
             int updateLines;
-            if (customer != null)
+            if (customer)
             {
-                throw new UserAlreadyExistsException("User Alredy Exist With Given Email: "+user.Email);
+                throw new UserAlreadyExistsException(Message.User_Already_Exist);
             }
 
             var user1 = new NewUser()
@@ -58,28 +60,20 @@ namespace Pizza.Services
                 Password = user.Password,
                 ContactNo = user.ContactNo
             };
-            try
+
+            //save user data in MS-SQL database
+            _userDbContext.Customers.Add(user1);
+            updateLines = _userDbContext.SaveChanges();
+
+            //save user data in MongoDB database
+            _mongoRepository.AddUser(new User()
             {
-                _userDbContext.Customers.Add(user1);
-                updateLines = _userDbContext.SaveChanges();
-                _mongoRepository.AddUser(new User()
-                {
-                    User_Id = user1.User_Id,
-                    Email = user.Email,
-                    Orders = new List<OrderDetails>()
-                });
-            }catch(Exception ex)
-            {
-                throw new Exception();
-            }
-            if(updateLines > 0)
-            {
-                return user1.User_Id;
-            }
-            else
-            {
-                return null;
-            }
+                User_Id = user1.User_Id,
+                Email = user.Email,
+                Orders = new List<OrderDetails>()
+            });
+
+            return user1.User_Id;
         }
 
         //Return user password if given user-id and email are correct.
@@ -89,7 +83,7 @@ namespace Pizza.Services
             NewUser customer = _userDbContext.Customers.Find(user_id);
             if (customer == null)
             {
-                throw new UserNotFoundException("User Not Registered With Given Email or Id");
+                throw new UserNotFoundException(Message.UserNotFound_ForForgetPassword);
             }
             else if(customer.User_Id == user_id && customer.Email == email)
             {
@@ -97,7 +91,7 @@ namespace Pizza.Services
             }
             else
             {
-                throw new IncorrectEmailOrPasswordException("Incorrect User-Id or Email");
+                throw new IncorrectEmailOrPasswordException(Message.Incorrect_EmailOrPassword);
             }
         }
 
@@ -109,21 +103,51 @@ namespace Pizza.Services
         }
 
         //Create order and return amount.
-        public string CreateOrder(OrderPizza order)
+        public string CreateOrder(List<OrderPizza> order)
         {
             User User = _mongoRepository.GetUserAndOrderDetails(User_Id);
-            int amount = (100 * order.Quantity)
-                    + (order.Size == Size.Small ? 50 : (order.Size == Size.Medium ? 100 : 150))
-                    + (order.Topping_Id.Count * 50);
+            int amount = 0;
 
-            DateTime now = DateTime.Now;
-            string formattedDateTime = now.ToString("yyyy-MM-dd HH:mm:ss");
+            //Check For Pizza Id and Topping Id
+            foreach(OrderPizza orderItem in order)
+            {
+                var isPizzaAvailable = _mongoRepository.GetMenu()
+                    .Any(menuItem => menuItem.Pizza
+                    .Any(pizza => pizza.Pizza_Id == orderItem.Pizza_Id));
+
+
+                var isToppingAvailable = _mongoRepository.GetMenu()
+                    .Any(menuItem => menuItem.Toppings
+                    .Any(topping => orderItem.Topping_Id.Contains(topping.Topping_Id)));
+
+                if (!isPizzaAvailable)
+                {
+                    throw new PizzaNotFound(Message.PizzaNotFound);
+                }
+                else if (!isToppingAvailable)
+                {
+                    throw new ToppingNotFound(Message.ToppingNotFound);
+                }
+                else
+                {
+                    continue;
+                }
+            }
+
+            //Calculate Amount.
+            foreach (OrderPizza orderItem in order)
+            {
+                amount += (100 * orderItem.Quantity)
+                    + (orderItem.Size == Size.Small ? 50 : (orderItem.Size == Size.Medium ? 100 : 150))
+                    + (orderItem.Topping_Id.Count * 50);
+
+            }
 
             var OrderDetails = new OrderDetails()
             {
                 Order_Id = "o" + DateTime.Now.ToString("ss"),
                 OrderPizzaDetails = order,
-                OrderDate = formattedDateTime,
+                OrderDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
                 OrderStatus = "Accepted",
                 OrderAmount = amount,
                 OrderTax = 25,
@@ -136,10 +160,10 @@ namespace Pizza.Services
             
             User.Orders.Add(OrderDetails);
             _mongoRepository.AddOrderDetailsToUser(User);
-            return "Order placed Successfully, Amount to pay: "+(amount+25);
+            return Message.Order_Placed+(amount+25);
         }
-
-        //Return list of login user's order details (all orders which are not Delivered).
+        
+        //Track All Orders Which Are Not Delivered.
         public List<OrderDetails> TrackOrder()
         {
             User user = _mongoRepository.GetUserAndOrderDetails(User_Id);

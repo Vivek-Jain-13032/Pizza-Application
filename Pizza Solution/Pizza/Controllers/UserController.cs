@@ -6,6 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 using Pizza.Exceptions;
 using Pizza.Models;
 using Pizza.Services;
+using Pizza.Utilities;
 using Swashbuckle.AspNetCore.Annotations;
 using System.ComponentModel.DataAnnotations;
 using System.Drawing;
@@ -34,16 +35,16 @@ namespace Pizza.Controllers
             try
             {
                 user_id = _userService.Register(user);
-            }catch (UserAlreadyExistsException ex) {
-                return Conflict(ex.Message);//409
-            }catch (Exception ex) {
-                return StatusCode(500, "An error occurred, try again later");
             }
-            if (user_id != "")
+            catch (UserAlreadyExistsException ex) 
             {
-                return Ok("Register Successfully, "+"Your User ID Is: "+user_id);
+                return Conflict(ex.Message);//409
+            }catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return StatusCode(500, Message.Server_Error);
             }
-            return StatusCode(500, "An error occurred, try again later");
+            return Ok(Message.Registering_Message + user_id);
         }
 
         //Login registered user OR throw appropriate exception if login unsuccessfull.
@@ -63,10 +64,11 @@ namespace Pizza.Controllers
                 return Unauthorized(ex.Message);//401
             }
             catch(Exception ex){
-                return StatusCode(500, "An error occurred: "+ ex.Message);//500
+                Console.WriteLine(ex.Message);
+                return StatusCode(500, Message.Server_Error);//500
             }
             //return JWT Token.
-            return Ok("JWT Token: "+"Bearer "+token);//200
+            return Ok(Message.Login_Message + "Bearer " +token);//200
         }
 
         //Return user password by taking correct user-id & email.
@@ -88,10 +90,10 @@ namespace Pizza.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, "An error occurred: " + ex.Message);//500
+                Console.WriteLine(ex.Message);
+                return StatusCode(500, Message.Server_Error);//500
             }
-
-            return Ok("Your Password is: "+password);//200
+            return Ok(Message.Forget_Password + password);//200
         }
 
         //View menu only after successfull login and using JWT Token as User Role.
@@ -105,9 +107,20 @@ namespace Pizza.Controllers
         //Create order after login and using JWT Token as User Role.
         [Authorize(Roles = "user")]
         [HttpPost("create-order")]
-        public IActionResult CreateOrder([FromBody]OrderPizza order)
+        public IActionResult CreateOrder([FromBody]List<OrderPizza> order)
         {
-            return Ok(_userService.CreateOrder(order));
+            string message;
+            try
+            {
+                message = _userService.CreateOrder(order);
+            }catch(PizzaNotFound ex)
+            {
+                return NotFound(ex.Message);
+            }catch(ToppingNotFound ex)
+            {
+                return NotFound(ex.Message);
+            }
+            return Ok(message);
         }
 
         //For login user, Track all orders which are not Delivered.

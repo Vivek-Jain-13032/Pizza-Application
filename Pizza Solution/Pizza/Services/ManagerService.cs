@@ -1,6 +1,7 @@
 ﻿using Pizza.Exceptions;
 using Pizza.Models;
 using Pizza.Repository;
+using Pizza.Utilities;
 
 namespace Pizza.Services
 {
@@ -27,17 +28,17 @@ namespace Pizza.Services
             var manager = _userDbContext.Manager.FirstOrDefault(m => m.Email == email);
             if (manager == null)
             {
-                throw new UserNotFoundException("Account Not Found With Given Email: " + email);
+                throw new UserNotFoundException(Message.UserNotFound_ForLogin);
             }
             else if (email == manager.Email && password == manager.Password)
             {
                 ManagerService.Id = manager.Email;
                 token = jwtToken.CreateJwtToken(manager.Email, "manager");
-                return "JWT Token: "+token;
+                return token;
             }
             else
             {
-                throw new IncorrectEmailOrPasswordException("Incorrect Email or Password");
+                throw new IncorrectEmailOrPasswordException(Message.Incorrect_EmailOrPassword);
             }
         }
 
@@ -78,7 +79,7 @@ namespace Pizza.Services
             }
             if (!flag)
             {
-                throw new OrderNotFound("Order Not Found With Given Order_Id: "+ order_id);
+                throw new OrderNotFound(Message.OrderNotFound + order_id);
             }
         }
 
@@ -105,7 +106,7 @@ namespace Pizza.Services
             }
             else
             {
-                throw new OrderNotFound("Order Not Found With Given Order_Id: " + order_id);
+                throw new OrderNotFound(Message.OrderNotFound + order_id);
             }
         }
     }

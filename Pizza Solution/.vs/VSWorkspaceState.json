@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Pizza"
+    "\\Pizza",
+    "\\Pizza\\Controllers",
+    "\\Pizza\\Models",
+    "\\Pizza\\Services"
   ],
-  "SelectedNode": "\\Pizza\\Services",
+  "SelectedNode": "\\Pizza\\Models\\OrderDetails.cs",
   "PreviewInSolutionExplorer": false
 }

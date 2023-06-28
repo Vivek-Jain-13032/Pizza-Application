@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Pizza.Exceptions;
 using Pizza.Models;
 using Pizza.Services;
+using Pizza.Utilities;
 
 namespace Pizza.Controllers
 {
@@ -32,10 +33,12 @@ namespace Pizza.Controllers
             }catch(IncorrectEmailOrPasswordException ex) { 
                 return Unauthorized(ex.Message);
             }catch (Exception ex) {
-                return StatusCode(500, "An error occurred: " + ex.Message);//500
+                Console.WriteLine(ex.Message);
+                return StatusCode(500, Message.Server_Error);//500
             }
-            return Ok("JWT Token: " + "Bearer " + token);//200
+            return Ok(Message.Login_Message + "Bearer " + token);//200
         }
+
 
         //Return details of all the orders of all registered users only after successfull login and using JWT Token as Manager Role.
         [Authorize(Roles = "manager")]
@@ -44,6 +47,7 @@ namespace Pizza.Controllers
         {
             return Ok(_managerService.ViewAllOrders());
         }
+
 
         //Manage order status of specific order with the help of order-id only after successfull login and using JWT Token as Manager Role.
         //OR throw exception if user is unauthorized or invalid token.
@@ -56,8 +60,9 @@ namespace Pizza.Controllers
             }catch (OrderNotFound ex) {
                 return NotFound(ex.Message);
             }
-            return Ok("Order Status Update Success");
+            return Ok(Message.Manage_Order);
         }
+
 
         //Get order details by order-id only after successfull login and using JWT Token as Manager Role.
         //OR throw exception if user is unauthorized or invalid token.

@@ -6,9 +6,8 @@ namespace Pizza.Models
     public class OrderDetails
     {
         [BsonId]
-        //[BsonRepresentation(BsonType.ObjectId)]
         public string Order_Id { get; set; }
-        public OrderPizza OrderPizzaDetails { get; set; }
+        public List<OrderPizza> OrderPizzaDetails { get; set; }
 
         public string OrderDate { get; set; }
 

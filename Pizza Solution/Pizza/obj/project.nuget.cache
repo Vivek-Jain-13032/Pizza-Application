@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5hEEp81pcFNTNdocgYdyDYxCsrVhkvqOqgAcmz8DM3r7LErsj2OIQDfZDGP5+x1wD5KCZZWpQqJq5D10J6YSSg==",
+  "dgSpecHash": "O07iyKr+okcDQogqNuzP5ZQTazUFy99vVydDm57pwsGU/CpmXWvvTxjAyevxNsyBLLEaa3ofsFyFuTnnhbA8mQ==",
   "success": true,
-  "projectFilePath": "D:\\Intelliswift\\Pizza Solution (12)\\Pizza Solution\\Pizza\\Pizza.csproj",
+  "projectFilePath": "D:\\Intelliswift\\Applications\\Pizza-Application\\Pizza Solution\\Pizza\\Pizza.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vivek\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\vivek\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
